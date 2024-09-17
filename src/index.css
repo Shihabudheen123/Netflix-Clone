@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+
+
+/* Shimmer Effect Styles */
+.shimmer-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.shimmer-card {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  height: 250px; /* Adjust height to match your card height */
+  width: 250px; /* Adjust width to match your card width */
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
